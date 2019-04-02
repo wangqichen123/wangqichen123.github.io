@@ -1,0 +1,143 @@
+HTML 标题（Heading）是通过 <h1> - <h6> 等标签进行定义的。
+
+
+
+HTML 段落是通过 <p> 标签进行定义的
+
+
+
+
+HTML 链接是通过 <a> 标签进行定义的。
+<html>
+<body>
+
+<a href="http://www.w3school.com.cn">
+This is a link</a>
+
+</body>
+</html>
+
+
+HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码。
+
+列如<p> 开始  结束</p>
+
+<a gref ="default.htm"> 开始 ,</a>结束
+
+
+
+<body> 元素定义了 HTML 文档的主体。
+这个元素拥有一个开始标签 <body>，以及一个结束标签 </body>。
+
+元素内容是另一个 HTML 元素（p 元素)
+
+
+<p> 元素定义了 HTML 文档中的一个段落。
+
+这个元素拥有一个开始标签 <p>，以及一个结束标签 </p>。
+
+元素内容是：This is my first paragraph。
+
+
+<html> 元素定义了整个 HTML 文档。
+
+这个元素拥有一个开始标签 <html>，以及一个结束标签 </html>。
+
+元素内容是另一个 HTML 元素（body 元素）。
+
+<html> 元素定义了整个 HTML 文档。
+
+这个元素拥有一个开始标签 <html>，以及一个结束标签 </html>。
+
+元素内容是另一个 HTML 元素（body 元素）。
+
+
+
+
+
+始终为属性值加引号
+属性值应该始终被包括在引号内。双引号是最常用的，不过使用单引号也没有问题。
+
+在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：
+
+name='Bill "HelloWorld" Gates'
+
+
+下面列出了适用于大多数 HTML 元素的属性：
+
+属性	值	描述
+class	classname	规定元素的类名（classname）
+id	id	规定元素的唯一 id
+style	style_definition	规定元素的行内样式（inline style）
+title	text	规定元素的额外信息（可在工具提示中显示）
+
+
+<hr /> 标签在 HTML 页面中创建水平线。
+
+hr 元素可用于分隔内容。
+
+
+注释：开始括号之后（左边的括号）需要紧跟一个叹号，结束括号之前（右边的括号）不需要。
+
+<!-- This is a comment -->
+
+查看源码
+单击右键，然后选择“查看源文件”（IE）或“查看页面源代码”（Firefox）
+
+
+不产生一个新段落的情况下进行换行（新行），请使用 <br />
+<p>This is<br />a para<br />graph with line breaks</p>
+
+style 属性用于改变 HTML 元素的样式。
+<html>
+
+<body style="background-color:yellow">
+<h2 style="background-color:red">This is a heading</h2>
+<p style="background-color:green">This is a paragraph.</p>
+</body>
+
+</html>
+
+
+<html>
+
+<body>
+<h1 style="font-family:verdana">A heading</h1>
+<p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>
+</body>
+
+</html>
+
+font-family、color 以及 font-size 属性分别定义元素中文本的字体系列、颜色和字体尺寸
+
+text-align 属性规定了元素中文本的水平对齐方式：
+
+<html>
+
+<body>
+<h1 style="text-align:center">This is a heading</h1>
+<p>The heading above is aligned to the center of this page.</p>
+</body>
+
+</html>
+
+HTML <q> 元素定义短的引用。
+计算机会为<q>元素加上“”号
+浏览器通常会对 blockquote 元素进行缩进处理
+
+用于缩略词的 HTML <abbr>
+HTML <abbr> 元素定义缩写或首字母缩略语。
+
+对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。
+
+
+引用（Quotation）!
+
+
+
+
+
+
+
+
+

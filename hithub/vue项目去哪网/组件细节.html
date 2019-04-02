@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>组件细节</title>
+	<script src="vue.js"></script>
+  </head>
+  <body>
+		<div id="app">
+			<counter ref="one" @change="handChange"></counter>
+			<counter ref="two" @change="handChange"></counter>
+			<div>{{total}}</div>
+		</div>
+	 
+		<script>
+			Vue.component('counter',{
+					template:'<div @click="handclick">{{number}}</div>',
+					data:function(){
+						return{
+							number:0
+						}
+					},
+					methods:{
+						handclick:function(){
+							this.number ++
+							this.$emit('change')
+						}
+					}
+			})
+			
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					total:0,
+					
+				},
+				methods:{
+					handChange:function(){
+						this.total=this.$refs.one.number+this.$refs.two.number
+					}
+				}
+			})
+		</script>
+  </body>
+</html>

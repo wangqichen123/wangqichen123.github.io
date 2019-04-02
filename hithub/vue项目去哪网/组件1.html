@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>v-cloak</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+	 <div id="root">
+	 		 <input type="text" v-model="test"/>  <!-- v-model 实现数据双向绑定 一边改变另一边也改变 -->
+	 		 <button v-on:click="btnclick">提交</button>
+	 		 <ul>
+				<TodoItem  v-bind:content='item' v-for="item in list"></TodoItem>
+	 		 </ul>
+	 </div>
+	 
+	 <script>
+			
+// 			 Vue.component("TodoItem",{
+// 				 props:['content'],                    全局组件
+// 				template:"<li>{{content}}</li>"
+// 			})
+				
+				var TodoItem ={
+					props:['content'],										 //局部组件
+					template:"<li>{{content}}</li>"	
+				}
+			
+		 
+	 		 var app=new Vue({
+	 		 	el:'#root',
+				components:{
+					TodoItem:TodoItem,
+				},
+	 			data:{
+	 				list:[],
+	 				test:''
+	 			},
+	 			methods:{
+	 				btnclick:function(){
+	 					this.list.push(this.test)  
+	 					this.test=''  
+	 					// alert(this.test)
+	 				}
+	 			}
+	 		 })
+			 
+	 </script>
+	 
+  </body>
+</html>

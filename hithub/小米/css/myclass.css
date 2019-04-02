@@ -1,0 +1,369 @@
+body,ul,li{  /* 设置高度出现滚动条 */
+	margin: 0;
+	padding: 0;
+	
+}
+body{  /* 小米网站的字体样式 */
+	height: 2500px;
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;  /* 消除链接小面的线 */
+}
+
+.tophead{   /* 顶部的大框 */
+	/* border: 1px solid black; */
+	background-color: #333;
+	height: 40px;
+}
+.container{  /* 容器,在tophead里面 将文字装起来 */
+	/* border: 1px solid black; */
+	margin:  0  auto;
+	width: 1226px;
+}
+.container::before,.container::after,.clearfix::before,.clearfix::after{ /* 和下一条样式一起,把浮动取消的边框,重新载入回来 */
+	content: "";
+	display: table;
+}
+.container::after,.clearfix::after{
+	clear: both;
+}
+
+.tophead a{
+	color: #B0B0B0;  /* tophead里面的字体颜色 */
+	font-size: 12px;  /* 字体大小 */
+}
+.tophead a:hover{   /* 鼠标移到tophead中的a时 ,颜色变化 */
+	color: #fff;   
+}
+
+.tophead_nav{ /* nav里面的内容向左浮动  设置高度和字体高度让字体显示居中 font_size消除空格*/
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	font-size: 0;       
+}
+.tophead_nav span{ /* 上一条样式size0将 span中的竖消失了,设置span大小,颜色,字体,间距 */
+	font-size: 12px;
+	color: #424242;
+	font-family: sans-serif;
+	margin: 0.5em;
+}
+
+.tophead_goin,.tophead_baycar{ /* goin和baycar里面的内容向右浮动 */
+	float: right;
+}
+
+
+.tophead_baycar a{  /* 设置购物车,块元素,设置高度和字体高度让它居中,文本居中 */
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 120px;
+	background-color: #424242;
+}
+.tophead_baycar a:hover{  /* 设置购物车鼠标移入时样式,改变背景颜色和字体颜色 */
+	background-color: #fff;
+	color: #ff6700;
+}
+
+.tophead_baycar i{
+	font-size: 20px;
+	line-height: 20px;
+	margin-right: 4px;
+	vertical-align: -4px;
+}
+	
+	
+.tophead_baycar span{   /* 设置购物车那个0的大小和距离,让它离得近一些 */
+	margin-left: -4px;
+	font-size: 12px;
+}
+.tophead_goin{    /* 右边距15px */
+	margin-right: 15px;
+}
+
+.tophead_goin a{    /* 设置右边块登录块的字体样式 */
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 5px;
+	
+}
+.tophead_goin span{   /* 设置右边块登录块的竖线样式 */
+	float: left;
+	font-family:sans-serif ;
+	font-size: 12px;
+	color: #424242;
+	height: 40px;
+	line-height: 40px;
+}
+.tophead_goin .distance{  /* 设置消息通知的样式,让它离购物车远一点 */
+	padding: 0 10px;
+}
+
+
+/* header部分 */
+
+.header{      /* 定义第二个头部框 */
+	height:100px ;
+	/* border: 1px solid red; */
+	
+}
+
+.header_logo{    /* 定义logo的样式 */
+	float: left;
+	width: 62px;
+	margin-top: 22px;
+	height: 55px;
+	/* border: 1px solid red; */
+}
+.header_logo a{  /* 定义logo里的a标签样式 */
+	display: block;
+	width:55px ;
+	height: 55px;
+	background: url(../img/logo.jpg)no-repeat 10% 10% ;
+}
+.header_logo a.lr{   /* 如果加载不出图片就会加载字体 */
+	text-align: left;
+	text-indent: -999em;
+}
+
+/* header nav 部分 */
+.header_nav{     /* 定义nav框里的样式 */
+	float: left;
+	width: 820px;
+	height: 100px;
+	/* border: 1px solid red; */
+}
+
+.header_nav.nav_list{  /* 定义ul样式 */
+	width: 820px;
+	height: 99px;
+	font-size: 16px;
+	padding: 12px 0 0 30px;
+}
+
+.header_nav .nav_list .nav-firstitem{ 
+	float: left;
+	width: 127px;
+	padding: 0 15px 0 0;
+}
+.header_nav .nav_list .nav-firstitem a{
+	
+	display: block;
+	padding: 26px 0 38px;
+	text-align: right;
+	color: #333;
+	
+}
+
+.header_nav .nav_list .nav-item{  /* 定义item向左浮动 */
+	float: left;
+}
+.header_nav .nav_list .nav-item a{ /* a 样式 */
+	display: block;
+	padding: 26px 10px 38px;
+	color: #333;
+}
+.header_nav .nav_list .nav-item a:hover{ /*  a houver */
+	color: #ff6700;
+}
+
+
+.header_search{   /* 定义搜索框里的样式 */
+	float: right;
+	width: 296px;
+	height: 50px;
+	margin-top: 25px;
+	/* border: 1px solid red; */
+}
+
+.header_search .search_form{  
+	position: relative;
+	display: block;
+	width: 296px;
+	height: 50px;
+}
+
+.header_search .search_form .search_text{ /* form表单里text的样式 */
+	position: absolute;
+	top: 0;
+	right: 51px;
+	display: block;
+	width: 245px;
+	height: 50px;
+	line-height: 50px;
+	/* border: 1px solid #e0e0e0; */
+	outline: 0;
+}
+
+.header_search .search_form .search_btn{ /* 搜索框btn 样式 */
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 52px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	font-size: 24px;
+	line-height: 24px;
+	background: #fff;
+	color: #616161;
+	outline: 0;
+}
+.header_search .search_form .search_btn:hover{
+	background-color: #FF6700;
+	color: #fff;
+}
+
+/* buykill 模块 */
+.buykill{
+	background-color: #f5f5f5;
+}
+
+.buykill_head{
+	margin-top: 19px;
+	height: 170px; 
+	background: url(../img/seckill-head.jpg)no-repeat 50% 0;
+	
+}
+.buykill_nav{
+	margin: -68px 0 22px;
+}
+
+.buykill_nav ul{
+	height: 68px;
+	background: #414141;
+}
+
+.buykill_nav li{    /* cursor pointer 鼠标变成小手 */
+	display: block;
+	float: left;
+	color: #fff;
+	width: 20%;
+	height: 68px;
+	line-height: 68px;
+	text-align: center;
+	cursor: pointer;
+}
+.buykill_nav li em{ /* line-height: 1 和自己一样大小 vertical-align: middle垂直居中 */
+	display: inline-block;
+	margin-left: 30px;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.buykill_nav li span{
+	display: inline-block;
+	margin-left: 15px;
+	text-align: left;
+	line-height: 1;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+ .buykill_nav .active{
+	 background-color: #f1393a;
+ }
+
+.buykill_nav ul li span em{/* font-style: normal;本来是斜体,让它变成正常 */
+	display: inline-block;
+	font-size: 14px;
+	margin-left: 0;
+	font-style: normal;
+	text-align: left;
+	line-height: 20px;
+}
+.buykill_goods ul{
+	margin-right: -13px;
+	
+}
+
+.buykill_goods li{
+	float: left;
+	width: 400px;
+	height: 190px;
+	background-color: #fff;
+	/* border: 1px solid black; */
+	margin-right: 13px;
+	margin-bottom: 13px;
+	
+}
+.buykill_goods .bg{
+	float: left;
+	width: 190px;
+	height: 190px;
+	/* border: 1px solid red; */
+}
+
+.buykill_goods .bg img{
+	height: 190px;
+}
+
+.buykill_goods .info{
+	margin-left: 210px;
+	width: 190px;
+	height: 190px;
+	/* border: 1px solid red; */
+	padding-top: 30px;
+}
+.buykill_goods .info .name{/* white-space: nowrap;取消自动换行overflow: hidden;超出部分隐藏 */
+	font-size: 16px;
+	color: #333;
+	height: 16px;
+	line-height: 16px;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.buykill_goods .info .tips{
+	font-size: 12px;
+	line-height: 12px;
+	color: #b0b0b0;
+	margin-top: 10px;
+	
+}
+.buykill_goods .info .price{
+	font-size: 16px;
+	line-height: 16px;
+	color: red;
+	margin-top: 14px;
+	margin-bottom: 0;
+}
+.buykill_goods .info .price del{
+	color: #999;
+	font-size: 12px;
+	line-height: 12px;
+	margin-left: 10px;
+	
+}
+
+.buykill_goods .info .btn{
+	display: inline-block;
+	width: 118px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background-color: #f1393a;
+	margin-top: 19px;
+	border:1px solid #F1393a;
+}
+
+.buykill_notice{
+	font-size: 12px;
+	color: #999;
+	margin-top: 100px;
+	padding-bottom: 35px;
+}

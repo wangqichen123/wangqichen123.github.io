@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>v-cloak</title>
+	<script src="vue.js"></script>
+  </head>
+  <body>
+			<div id="app">
+				{{allName}}
+			</div>
+			
+			<script>
+				var vm=new Vue({
+					el:'#app',
+					data:{
+						firstName:'wqc',
+						lastName:'123',
+
+					},
+					computed:{
+						allName:{
+							get:function(){
+								return this.firstName+' '+this.lastName;
+							},
+							set:function(value){
+								var arr=value.split(" ");
+								this.firstName=arr[0];
+								this.lastName=arr[1];
+							}
+						}
+							// set 改变值之后会引起computed的重新计算,页面也会更改 
+							
+						
+					}
+				})
+			</script>
+  </body>
+</html>

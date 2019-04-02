@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>vue中样式的绑定</title>
+	<script src="vue.js"></script>
+	<!-- <style> (02)
+		.activated{
+			color: red;
+		}
+	</style> -->
+  </head>
+  <body>
+		<div id="app">
+			<div :style=[decolor,{fontSize:'100px'}] @click="funcolor">
+				hello
+			</div>
+			<!-- <div @click="click" :class="[activated]">hello wqc</div> (02)-->
+			<!-- <div @click="click" :class="{activated: isActivated}">hello wqc</div>    class 的对象绑定  (第一种绑定) -->
+		</div>
+		
+	 <script>
+		 var vm=new Vue({
+			 el:"#app",
+			 data:{
+				 decolor:{
+					 color:"black",
+					 
+				 },
+				 // isActivated:false  (第一种绑定)
+				 // activated:"",
+				 // activatedOne:"acticatedOne"
+			 },
+			 methods:{
+				 funcolor:function(){
+					 this.decolor.color=this.decolor.color==="black"? "red":"black";
+					 
+// 				 click:function(){   	(02)
+// 					 this.activated=this.activated ==="activated" ? "" : "activated"
+// 				 }
+// 				 click:function(){
+// 					 this.isActivated=!this.isActivated;  (第一种绑定)
+// 				 }
+			 }
+			} 
+		 })
+	 </script>
+  </body>
+</html>

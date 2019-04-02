@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>v-cloak</title>
+	<script src="vue.js"></script>
+  </head>
+  <body>
+		<div id="test">
+			<div @click="handclick">
+				{{message}}
+			</div>
+			<item></item>     <!-- 显示组件内容 -->
+		</div>
+	 
+		<script>
+			
+			Vue.component('item',{
+				 template:'<div>hello item</div>'  //全局组件
+			})
+			
+			var vm=new Vue({
+				el:'#test',
+				data:{
+					message:'hello',
+					
+				},
+				methods:{
+					handclick:function(){
+						alert('hello wqc')
+					}
+				},
+				
+			})
+			
+		</script>
+  </body>
+</html>
+<!-- 每一个组件都是Vue实例，el data 还有各种方法等等 -->

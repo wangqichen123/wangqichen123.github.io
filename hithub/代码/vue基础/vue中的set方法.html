@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+		<title>vue中的set方法</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<!-- 笔记中查询，该方法主要在页面中使用插入或改变数据使页面同步 -->
+		<div id="app">
+			<div v-for="(item) of person">
+				{{item}}
+			</div>
+		</div>
+
+		<script>
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					person:[1,2,3,4]
+					
+				},
+			})
+		</script>
+	</body>
+</html>

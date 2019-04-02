@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>v-cloak</title>
+	<script src="vue.js"></script>
+  </head>
+  <body>
+		<div id="helf">
+			
+		</div>
+		
+		<script>
+			var vm=new Vue({
+				el:'#helf',
+				template:"<div>{{msg}}</div>",  // 相当于div模板
+				data:{
+					 msg:'hello wqc test'
+				 },
+				 
+				 // vue的生命周期函数 从上到下
+				 // 生命周期函数就是vue实例在某一个时间点会自动执行的函数
+				beforeCreate:function(){          //初始化自动调用          
+					console.log("beforeCreate");    
+				},
+				created:function(){					
+					console.log("created");
+				},
+				beforeMount:function(){
+					console.log(this.$el);           //页面上的hellowqc这时还没渲染到页面
+					console.log("beforeMount");
+				},
+				mounted:function(){
+					console.log(this.$el);			//页面上的hellowqc已经渲染到页面(页面上显示了)
+					console.log("mounted");
+				},
+				
+				
+				beforeDestroy:function(){            //当vm的实例将被销毁的时候执行
+					console.log("beforeDestroy");
+				},
+				destroyed:function(){
+					console.log("destroyed");		//当vm的实例完全被销毁时将会调用
+				},
+				
+				beforeUpdate:function(){            //当数据被改变,在页面重新渲染之前,执行
+					console.log("beforeUpdate");
+				},
+				
+				updated:function(){					//当数据被改变,页面渲染之后执行
+					console.log("updated");
+				},
+				
+				
+				
+				
+			})
+		</script>
+  </body>
+</html>

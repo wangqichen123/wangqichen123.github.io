@@ -1,0 +1,196 @@
+<body> 定义 HTML 文档的主体。
+
+<body bgcolor="yellow"> 拥有关于背景颜色的附加信息。
+
+
+<table> 定义 HTML 表格。（您将在稍后的章节学习到更多有关 HTML 表格的内容）
+
+<table border="1"> 拥有关于表格边框的附加信息。
+
+
+标签	描述
+<html>	定义 HTML 文档。
+<body>	定义文档的主体。
+<h1> to <h6>	定义 HTML 标题
+<hr>	定义水平线。
+<!-->	定义注释。
+
+<p>	定义段落。
+<br />	插入单个折行（换行）。
+
+
+标签	描述
+<b>	定义粗体文本。
+<big>	定义大号字。
+<em>	定义着重文字。
+<i>	定义斜体字。
+<small>	定义小号字。
+<strong>	定义加重语气。
+<sub>	定义下标字。
+<sup>	定义上标字。
+<ins>	定义插入字。
+<del>	定义删除字。
+
+
+标签	描述
+<code>	定义计算机代码。
+<kbd>	定义键盘码。
+<samp>	定义计算机代码样本。
+<tt>	定义打字机代码。
+<var>	定义变量。
+<pre>	定义预格式文本。
+
+<abbr>	定义缩写。
+<acronym>	定义首字母缩写。
+<address>	定义地址。
+<bdo>	定义文字方向。
+<blockquote>	定义长的引用。
+<q>	定义短的引用语。
+<cite>	定义引用、引证。
+<dfn>	定义一个定义项目。
+
+<code>	定义计算机代码文本
+
+显示结果	描述	实体名称	实体编号
+ 		空格	&nbsp;	&#160;
+<		小于号	&lt;	&#60;
+>		大于号	&gt;	&#62;
+&		和号	&amp;	&#38;
+"		引号	&quot;	&#34;
+'		撇号 	&apos; (IE不支持)	&#39;
+￠		分  cent&cent;	&#162;
+￡		镑（pound）&pound;	&#163;
+￥		元（yen）&yen;	&#165;
+�		欧元（euro）&euro;	&#8364;
+§		小节	&sect;&#167;
+?		版权（copyright）	&copy;	&#169;
+?		注册商标	&reg;	&#174;
+?		商标	&trade;	&#8482;
+
+Scheme	访问	用于...
+http	超文本传输协议	以 http:// 开头的普通网页。不加密。
+https	安全超文本传输协议	安全网页。加密所有信息交换。
+ftp	文件传输协议	用于将文件下载或上传至网站。
+file	 	您计算机上的文件。
+
+
+
+×	乘号	&times;	&#215;
+÷	除号	&divide;	&#247;
+<kbd>	定义键盘文本
+<samp>	定义计算机代码示例
+<var>	定义变量
+<pre>	定义预格式化文本
+
+URL 指存储图像的位置。如果名为 "boat.gif" 的图像位于 www.w3school.com.cn 的 images 目录中，那么其 URL 为 http://www.w3school.com.cn/images/boat.gif。
+
+
+标签	描述
+<style>	定义样式定义。
+<link>	定义资源引用。
+<div>	定义文档中的节或区域（块级）。
+<span>	定义文档中的行内的小块或区域。
+<font>	规定文本的字体、字体尺寸、字体颜色。不赞成使用。请使用样式。
+<basefont>	定义基准字体。不赞成使用。请使用样式。
+<center>	对文本进行水平居中。不赞成使用。请使用样式
+
+<img src="url" />  定义图像的语法
+
+<img src="boat.gif" alt="Big Boat">alt 属性用来为图像定义一串预备的可替换的文本。替换文本属性的值是用户定义的
+
+<body background="/i/eg_background.jpg"> 图像背景
+
+<table>	定义表格
+<caption>	定义表格标题。
+<th>	定义表格的表头。
+<tr>	定义表格的行。
+<td>	定义表格单元。
+<thead>	定义表格的页眉。
+<tbody>	定义表格的主体。
+<tfoot>	定义表格的页脚。
+<col>	定义用于表格列的属性。
+<colgroup>	定义表格列的组。
+
+
+<ol>	定义有序列表。
+<ul>	定义无序列表。
+<li>	定义列表项。
+<dl>	定义定义列表。
+<dt>	定义定义项目。
+<dd>	定义定义的描述。
+
+<div>	定义文档中的分区或节（division/section）。
+<span>	HTML <span> 元素是行内元素，能够用作文本的容器。
+
+设置 <span> 元素的类，能够为相同的 <span> 元素设置相同的样式。
+
+<iframe>	定义内联的子窗口（框架）
+
+<script>	定义客户端脚本。
+<noscript>	为不支持客户端脚本的浏览器定义替代内容。
+
+<head>	定义关于文档的信息。
+<title>	定义文档标题。
+<base>	定义页面上所有链接的默认地址或默认目标。
+<link>	定义文档与外部资源之间的关系。
+<meta>	定义关于 HTML 文档的元数据。
+<script>	定义客户端脚本。
+<style>	定义文档的样式信息。
+
+可以添加到 head 部分：<title>、<base>、<link>、<meta>、<script> 以及 <style>
+
+title 元素能够：
+
+定义浏览器工具栏中的标题
+提供页面被添加到收藏夹时显示的标题
+显示在搜索引擎结果中的页面标题
+
+HTML <base> 元素：
+<base> 标签为页面上的所有链接规定默认地址或默认目标（target）：
+
+HTML <link> 元素
+<link> 标签定义文档与外部资源之间的关系。
+
+<link> 标签最常用于连接样式表：
+
+HTML <style> 元素
+<style> 标签用于为 HTML 文档定义样式信息。
+
+您可以在 style 元素内规定 HTML 元素在浏览器中呈现的样式：
+
+URL 编码示例
+字符	URL 编码
+�	%80
+￡	%A3
+?	%A9
+?	%AE
+à	%C0
+á	%C1
+?	%C2
+?	%C3
+?	%C4
+?	%C5
+
+仅仅有 16 种颜色名被 W3C 的 HTML4.0 标准所支持。它们是：aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yello
+如果需要使用其它的颜色，需要使用十六进制的颜色值。
+
+列：
+#F0F8FF	AliceBlue
+#0000FF	Blue
+#8A2BE2	BlueViolet
+
+
+
+HTML Basic Document
+Text Elements
+Logical Styles
+Physical Styles
+Links, Anchors, and Image Elements
+Unordered list
+Ordered list
+Definition list
+Tables
+Frames
+Forms
+Entities
+Other Elements

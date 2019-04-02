@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>唯品会商品栏--wqc</title>
+	<meta name="keywords" content="彷唯品会商品栏，鼠标划入">
+	<meta name="description" content="">
+
+	<style>
+	body{
+		margin: 0;
+	}
+		.lists{/*类选择器  。类名{} 弹性容器*/
+			display: flex;/*改变元素的排列方式*/
+			flex-wrap: wrap;/*换行*/
+			justify-content: space-between;/*元素在主轴上的排列方式，两端对齐*/
+			align-content: space-between;/*元素在交叉轴的排列方式*/
+			width: 980px;
+			height: 480px;
+			background-color: #cccccc;
+			margin:150px auto 0 auto;
+		}
+		.list-item{/*项目*/
+			width: 480px;
+			height: 230px;
+			background-color: #ff9900;
+		}
+		.discover{
+			width: 480px;
+			height: 230px;
+			background-color: #ff0000;
+		}
+		.cover{
+			width: 400px;
+			height: 185px;
+			background-color: #3300ff;
+			transform: translate(45px,-206px);/*位移，相对于自身，进行X轴和Y轴的偏移*/
+			opacity: 0;/*元素透明度 1：不透明 0：全透明*/
+			transition: 0.7s;/*css3过度 效果完成时间变长*/
+		}
+		.cover img{
+			border-radius: 7px;
+		}/*图片四个角变圆*/
+		.list-item:hover{/*伪类选择器：设置鼠标悬停时样式变化*/
+			filter:blue(3px);/*css3滤镜效果，blue里面数值越大越模糊*/
+		}
+		.list-item:hover .cover{
+			opacity: 1;
+		}
+
+	</style>
+</head>
+
+<body>
+<div class="lists">
+	<div class="list-item">
+		
+		
+	</div>
+	<div class="list-item">
+	
+	</div>
+	<div class="list-item">
+		
+	</div>
+	<div class="list-item">
+		<!--默认情况下展示出来的大图片-->
+		<div class="discover">
+			<img src="img/5.jpg">
+		</div>
+		<!--默认情况下没展示出来的小图片-->
+		<div class="cover">
+			<img src="img/5.jpg">
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+<!--
+meta 标签
+	存放了网页的一些基本信息，提供给浏览器与搜索引行，用户看不到
+
+网站的布局思路
+1 划区域
+2 排内容
+3 塞内容
+
+W3C组织 div元素 -》盒模型-》矩形区域-》块元素
+块元素在父元素里面的排列方式：
+1 从上往下
+2 从左开始
+3 单独占一行（没人情况下，块元素继承父元素的宽度）
+
+外边距margin:
+1 元素与元素之间的距离
+2 元素与浏览器之间的距离
+
+弹性盒模型排列规则：
+主轴：
+交叉轴：
+默认情况下，项目沿主轴七点排到终点呈一行排列，沿着交叉轴起点排到终点！
+1 项目总宽度（480*4）> 弹性容器宽度(980)->等比缩放排列（980/4）
+2 项目总宽度（480*2）> 弹性容器宽度(980)->项目按自身宽度排列
+
+布局：逻辑
+1 四个小矩形 可以保持自身宽度排列-》换行
+2 水平方向上改变项目位置
+3 垂直方向上改变项目位置
+
+图片路径：
+1 绝对路径（不同服务器 不同房间 比如引入在线图片）
+2 相对路径 （同一个服务器 同一个房间）
+
+
+随便给元素命名 会加大时间成本 后期维护难度增高
+
+
+
+
+
+-->

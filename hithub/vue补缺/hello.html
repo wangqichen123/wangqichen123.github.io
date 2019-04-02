@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+		<title>hello动画</title>
+		<script src="vue.js"></script>
+	</head>
+	<style>
+		.slide-fade-enter-active {
+			transition: all .3s ease;
+		}
+		.slide-fade-leave-active {
+			transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		}
+		.slide-fade-enter,.slide-fade-leave-to {
+			transform: translateX(10px);
+			opacity: 0;
+		}
+	</style>
+	<body>
+		<div id="example-1">
+			<button @click="show = !show">
+				点击
+			</button>
+			<transition name="slide-fade">
+				<p v-if="show">hello</p>
+			</transition>
+		</div>
+
+		<script>
+			new Vue({
+					el: '#example-1',
+					data: {
+						show: true
+					}
+				})
+			
+		</script>
+	</body>
+</html>

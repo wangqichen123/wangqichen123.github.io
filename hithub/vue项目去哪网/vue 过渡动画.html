@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>vue 过渡动画</title>
+	<script src="vue.js"></script>
+  </head>
+	<style>
+		/* 过渡动画效果 */
+		.wqc-enter,.wqc-leave-to{									/* 显示3秒渐显 */
+			opacity: 0;
+		}
+		.wqc-enter-active,.wqc-leave-active{			/* 隐藏3秒渐隐 */
+			transition: opacity 3s;
+		}
+	
+	</style>
+  <body>
+	 <div id="app">
+		 <transition name="wqc">
+				<div v-if="show">hello wqc</div>
+		 </transition>
+		 <button @click="handclick">点击</button>
+	 </div>
+	 
+	 <script>
+		 var vm=new Vue({
+			 el:'#app',
+			 data:{
+				 show:false
+			 },
+			 methods:{
+				 handclick:function(){
+					 this.show=!this.show
+				 }
+			 }
+		 })
+	 </script>
+  </body>
+</html>

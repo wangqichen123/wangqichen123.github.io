@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+		<link rel="stylesheet" type="text/css" href="animate.css" />
+    <title>animate.css</title>
+	<script src="vue.js"></script>
+  </head>
+	<style>
+		@keyframes bounce-in{
+			0%{
+				transform: scale(0);
+			}
+			50%{
+				transform: scale(1.5);
+			}
+			100%{
+				transform: scale(1);
+			}
+		} 
+		
+		.enter{
+			transform-origin: left center; 
+			animation: bounce-in 1s;
+		}
+		.leave{
+			transform-origin: left center; 
+			animation: bounce-in 1s reverse;
+		}
+	
+	</style>
+  <body>
+	 <div id="app">
+		 <transition name="wqc"
+		 enter-active-class="enter"
+		 leave-active-class="leave"
+		 >
+				<div v-if="show">hello wqc</div>
+		 </transition>
+		 <button @click="handclick">点击</button>
+	 </div>
+	 
+	 <script>
+		 var vm=new Vue({
+			 el:'#app',
+			 data:{
+				 show:false
+			 },
+			 methods:{
+				 handclick:function(){
+					 this.show=!this.show
+				 }
+			 }
+		 })
+	 </script>
+  </body>
+</html>

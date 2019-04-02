@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+		<link rel="stylesheet" type="text/css" href="animate.css" />
+		<title>同时视同过渡和动画</title>
+		<script src="vue.js"></script>
+	
+	</head>
+	
+	<style>
+		.wqc-enter ,.wqc-leave-to{
+			opacity: 0;
+		}
+		.wqc-enter-active,.wqc-leave-active{
+			transition: opacity:3s;
+		}
+	</style>
+
+	<body>
+		<!-- duration自定义运行动画时间 -->
+		<div id="app">
+			<transition 
+			:duration="10000"       
+			name="wqc" 
+			appear
+			enter-active-class="animated swing wqc-enter-active"
+			leave-active-class="animated shake wqc-leave-actice"
+			appear-active-class="animated swing">
+				<div v-if="show">hello wqc</div>
+			</transition>
+			<button @click="handclick">点击</button>
+		</div>
+
+		<script>
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					show: true
+				},
+				methods: {
+					handclick: function() {
+						this.show = !this.show
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>v-cloak</title>
+	<script src="vue.js"></script>
+  </head>
+  <body>
+	 <div id="app">
+		 <div v-for="(item,key,index) of person">
+			{{item}}...{{key}}...{{index}}
+		 </div>
+		 <!-- <template v-for="(item,index) in list" 
+						:key="item.id" 
+						:style=[dcolor,{fontSize:'20px'}]>
+						<div>
+							{{item.name}}.....{{index}}
+						</div>
+						<span>
+							{{item.text}}
+						</span>
+		 </template> -->
+		<!-- <div @click="Change" v-for="(item,index) in list">{{item}}----{{index}}</div> -->
+	 </div>
+	 
+	 <script>
+		 var vm=new Vue({
+			 el:"#app",
+			 data:{
+				 person:{
+					 name:"wqc",
+					 age:24,
+					 home:"shiyan",
+					 six:"man"
+				 },
+				 dcolor:{
+					 color:"red"
+				 }
+			 },
+			 
+// 			 data:{
+// 				 dcolor:{
+// 					 color:"blue"
+// 				 },
+// 				 
+// 				 list:[
+// 						{
+// 							id:"123456",
+// 							name:"wwqc"
+// 						},
+// 						{
+// 							id:'1234567',
+// 							name:'wgj'
+// 						},
+// 						{
+// 							id:'12345678',
+// 							name:'cq'
+// 						}
+// 				 ]
+// 			 },
+// 			 methods:{
+// 				 Change:function(){
+// 					 this.dcolor.color=this.dcolor.color==="blue"?"red":"blue",
+// 					 
+// 				 }
+// 			 }
+		 })
+	 </script>
+  </body>
+</html>

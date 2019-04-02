@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+		<link rel="stylesheet" href="2.css" />
+    <title>v-cloak</title>
+	<script src="../vue.js"></script>
+	
+  </head>
+  <body>
+		<div id="app">
+			<h1>hello</h1>
+			<h2 v-text="wqc">v-if渲染的</h2>
+			<h3 v-text="wgj">这是v-show渲染的</h3>
+			<input type="button" value="按钮" style="width: 200px;" v-on:click="text" />
+		</div>
+	 
+	 <script>
+		 var vm=new Vue({
+			 el:'#app',
+			 data:{
+				 wqc:'wangqichen',
+				 wgj:'wangguanjie'
+				 
+			 },
+			 methods:{
+				 text:function(){
+					 alert("点了")
+				 }
+			 }
+			 
+			 
+		 })
+		 
+	 </script>
+	 
+  </body>
+</html>
